@@ -1,0 +1,180 @@
+.content { display: flex; flex-direction: column; gap: 0; }
+
+.section {
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(48,26,70,.07);
+}
+.section:last-child { border-bottom: none; }
+
+/* Welcome */
+.welcome { display: grid; grid-template-columns: 1fr 340px; gap: 36px; align-items: flex-start; }
+.welcomeText { display: flex; flex-direction: column; gap: 14px; }
+.welcomeText p { font-size: .93rem; color: var(--text-muted); line-height: 1.75; }
+.welcomeImg { border-radius: var(--radius-lg); flex-shrink: 0; }
+
+/* Story */
+.storyGrid { display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: flex-start; margin-top: 20px; }
+.storyText { display: flex; flex-direction: column; gap: 14px; }
+.storyText p { font-size: .91rem; color: var(--text-muted); line-height: 1.75; }
+.tagBox {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--cream);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(48,26,70,.08);
+}
+
+/* Typography */
+.h2 {
+  font-family: var(--font-fredoka), 'Fredoka', cursive;
+  font-size: 1.9rem;
+  color: var(--purple);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.h2 span { color: var(--orange); }
+.h3 {
+  font-family: var(--font-fredoka), 'Fredoka', cursive;
+  font-size: 1.35rem;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.subtitle { font-size: 1rem; color: var(--text-muted); }
+.lead { font-size: .93rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
+
+/* Facilities */
+.facilityList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.facilityList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .89rem;
+  font-weight: 700;
+  color: var(--text);
+  padding: 12px 14px;
+  background: var(--cream);
+  border-radius: 10px;
+  border: 1.5px solid rgba(48,26,70,.08);
+}
+.facilityIcon { color: var(--purple); flex-shrink: 0; display: flex; }
+
+/* Mission & Vision */
+.mvGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.mvCard {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 2px solid;
+}
+.mvTitle { font-family: var(--font-fredoka), cursive; font-size: 1.1rem; margin-bottom: 10px; }
+.mvCard p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; }
+
+/* Core Values */
+.valuesGrid { display: flex; flex-direction: column; gap: 10px; }
+.valueCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--cream);
+  border-radius: 12px;
+}
+.valueDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.valueName { font-size: .9rem; display: block; margin-bottom: 3px; }
+.valueDesc { font-size: .84rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+
+/* Curriculum */
+.curriculumGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.curriculumItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid;
+}
+.curriculumLabel { font-size: .84rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+
+/* Checklists */
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.checkList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: .91rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* Unique list */
+.uniqueList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.uniqueList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.55;
+  padding: 12px 16px;
+  background: var(--cream);
+  border-radius: 10px;
+  border-left: 4px solid var(--orange);
+}
+
+/* Photo grid */
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Primary-specific */
+.scheduleTable { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.scheduleTable th {
+  background: var(--orange);
+  color: #fff;
+  padding: 12px 16px;
+  font-size: .84rem;
+  text-align: left;
+  font-weight: 700;
+}
+.scheduleTable td {
+  padding: 11px 16px;
+  font-size: .87rem;
+  color: var(--text);
+  border-bottom: 1px solid rgba(48,26,70,.07);
+}
+.scheduleTable tr:nth-child(even) td { background: var(--cream); }
+.scheduleTable tr:last-child td { border-bottom: none; }
+
+/* Responsive */
+@media (max-width: 760px) {
+  .welcome { grid-template-columns: 1fr; }
+  .welcomeImg { display: none; }
+  .storyGrid { grid-template-columns: 1fr; }
+  .facilityList { grid-template-columns: 1fr; }
+  .mvGrid { grid-template-columns: 1fr; }
+  .curriculumGrid { grid-template-columns: repeat(2, 1fr); }
+  .photoGrid { grid-template-columns: repeat(2, 1fr); }
+}

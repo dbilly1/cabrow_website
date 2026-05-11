@@ -1,0 +1,86 @@
+.programs { background: var(--cream); padding: 0 0 0; }
+
+.header { text-align: center; margin-bottom: 48px; }
+.header .section-sub { margin: 0 auto; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+
+/* Banner */
+.banner {
+  position: relative;
+  height: 200px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.bannerOrange { background: linear-gradient(145deg,#fde8d0,#fcc8a0); }
+.bannerGreen  { background: linear-gradient(145deg,#dcfce7,#a7f3c3); }
+
+.pblob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: .35;
+}
+.pb1 { width:100px;height:100px; top:-20px;right:30px; }
+.pb2 { width:70px;height:70px; bottom:-10px;left:40px; }
+.bannerOrange .pb1 { background:var(--orange); }
+.bannerOrange .pb2 { background:var(--pink); }
+.bannerGreen  .pb1 { background:var(--green); }
+.bannerGreen  .pb2 { background:var(--yellow); }
+
+/* Body */
+.body { padding: 28px 32px 36px; }
+.body h3 {
+  font-size: 1.65rem;
+  color: var(--purple);
+  margin: 8px 0 20px;
+}
+
+.age {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+.ageOrange { background:var(--orange-light); color:var(--orange); }
+.ageGreen  { background:var(--green-light);  color:#15803d; }
+
+.list {
+  list-style: none;
+  margin: 0 0 28px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.list li {
+  font-size: .93rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding-left: 18px;
+  position: relative;
+}
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+.pri .list li::before { background: var(--green); }
+
+@media (max-width:900px) {
+  .grid { grid-template-columns:1fr; }
+}

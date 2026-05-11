@@ -1,0 +1,115 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 48px 0 80px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  position: sticky;
+  top: 88px; /* header height + gap */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sideCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.sideTitle {
+  font-family: var(--font-fredoka), 'Fredoka', cursive;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--orange);
+  padding: 14px 18px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.linkList { list-style: none; padding: 8px 0; margin: 0; }
+
+.sideLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+.sideLink:hover {
+  color: var(--orange);
+  background: var(--orange-light);
+  border-left-color: var(--orange);
+}
+
+.arrow {
+  font-size: 1.1rem;
+  color: var(--orange);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Contact mini-card ── */
+.contactCard {
+  background: #1c3a2a;
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contactTitle {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.contactSub {
+  font-size: .8rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.contactPhone {
+  font-size: .88rem;
+  font-weight: 800;
+  color: var(--orange);
+  text-decoration: none;
+}
+.contactPhone:hover { text-decoration: underline; }
+
+/* ── Main ── */
+.main { min-width: 0; }
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 540px) {
+  .sidebar { grid-template-columns: 1fr; }
+  .wrapper { padding: 32px 16px 60px; }
+}

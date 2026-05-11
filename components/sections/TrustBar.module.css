@@ -1,0 +1,32 @@
+.trust { background: var(--white); padding: 32px 0; border-bottom: 1px solid rgba(48,26,70,.06); }
+
+.inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 28px;
+  border-right: 1px solid rgba(48,26,70,.08);
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--text);
+}
+.item:last-child { border-right: none; }
+
+.icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width:768px) {
+  .item { border-right: none; width: 50%; justify-content: center; }
+}
+@media (max-width:480px) {
+  .item { width: 100%; }
+}

@@ -1,0 +1,37 @@
+.values { background: var(--cream); padding: 0 0 90px; }
+
+.header { text-align:center; margin-bottom:48px; padding-top:72px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+.card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+
+.icon { margin-bottom:14px; }
+
+.card h4 {
+  font-family:var(--font-fredoka),'Fredoka One',cursive;
+  font-size:1.1rem;
+  color:var(--purple);
+  margin-bottom:8px;
+}
+.card p { font-size:.87rem; color:var(--text-muted); line-height:1.65; }
+
+@media (max-width:1024px) {
+  .grid { grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:768px) {
+  .grid { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:480px) {
+  .grid { grid-template-columns:1fr; }
+}

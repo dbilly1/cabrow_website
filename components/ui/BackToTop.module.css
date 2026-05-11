@@ -1,0 +1,13 @@
+.btn {
+  position: fixed; bottom: 26px; right: 26px; z-index: 999;
+  width: 46px; height: 46px;
+  background: var(--orange); color: #fff;
+  border-radius: 50%; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 18px rgba(249,115,22,.38);
+  opacity: 0; pointer-events: none;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+.btn.show { opacity: 1; pointer-events: all; transform: none; }
+.btn:hover { transform: translateY(-3px); }

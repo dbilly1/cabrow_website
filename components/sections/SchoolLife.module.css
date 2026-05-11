@@ -1,0 +1,44 @@
+.section { background: var(--white); padding: 90px 0; }
+
+.header { text-align:center; margin-bottom:48px; }
+.header .section-sub { margin:0 auto; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.card::after {
+  content:'';
+  position:absolute;
+  width:100px;height:100px;
+  border-radius:50%;
+  background:rgba(255,255,255,.35);
+  right:-20px;bottom:-20px;
+}
+.card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+
+.icon { color:var(--purple); margin-bottom:12px; }
+
+.card h4 {
+  font-family:var(--font-fredoka),'Fredoka One',cursive;
+  font-size:1.05rem;
+  color:var(--purple);
+  margin-bottom:6px;
+}
+.card p { font-size:.85rem; color:var(--text-muted); font-weight:600; }
+
+@media (max-width:768px) {
+  .grid { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:480px) {
+  .grid { grid-template-columns:1fr; }
+}

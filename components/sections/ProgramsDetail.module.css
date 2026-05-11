@@ -1,0 +1,89 @@
+.section { background: var(--white); padding: 80px 0; }
+
+.header { text-align: center; margin-bottom: 60px; }
+.header .section-sub { margin: 0 auto; }
+
+.block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.block.flip { direction: rtl; }
+.block.flip > * { direction: ltr; }
+
+.divider {
+  height: 1px;
+  background: rgba(48,26,70,.08);
+  margin: 64px 0;
+}
+
+/* Schedule */
+.scheduleCol h3, .approachCol h3 {
+  font-size: 1.2rem;
+  color: var(--purple);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid rgba(48,26,70,.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(48,26,70,.06);
+  font-size: .88rem;
+}
+.row:last-child { border-bottom: none; }
+.row:nth-child(even) { background: var(--cream); }
+
+.time {
+  min-width: 140px;
+  padding: 12px 16px;
+  font-weight: 800;
+  font-size: .82rem;
+  border-right: 2px solid rgba(48,26,70,.06);
+  flex-shrink: 0;
+}
+.activity {
+  padding: 12px 16px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Approach */
+.cards { display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border-left: 4px solid;
+}
+.cardIcon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.card h4 {
+  font-size: .97rem;
+  color: var(--purple);
+  margin-bottom: 5px;
+}
+.card p { font-size: .87rem; color: var(--text-muted); line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .block, .block.flip { grid-template-columns: 1fr; direction: ltr; }
+}

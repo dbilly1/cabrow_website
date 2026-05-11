@@ -1,0 +1,22 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--purple-light) 0%, var(--cream) 100%);
+  border-radius: var(--radius-lg);
+  border: 2px dashed rgba(48,26,70,.15);
+  width: 100%;
+  overflow: hidden;
+}
+
+.icon { color: rgba(48,26,70,.25); }
+
+.label {
+  font-size: .78rem;
+  font-weight: 700;
+  color: rgba(48,26,70,.3);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}

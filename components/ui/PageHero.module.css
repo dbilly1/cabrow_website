@@ -1,0 +1,58 @@
+.hero {
+  background: var(--purple-pale);
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 0;
+}
+
+.blob1 {
+  position: absolute;
+  width: 400px; height: 400px;
+  background: var(--orange);
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .10;
+  top: -120px; right: -80px;
+  pointer-events: none;
+}
+.blob2 {
+  position: absolute;
+  width: 300px; height: 300px;
+  background: var(--pink);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .08;
+  bottom: 0; left: -60px;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 56px;
+}
+
+.title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--purple);
+  line-height: 1.12;
+  margin-bottom: 16px;
+}
+
+.sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.wave {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: -1px;
+}
+.wave svg { display: block; width: 100%; }

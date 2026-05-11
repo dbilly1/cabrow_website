@@ -1,0 +1,161 @@
+.content { display: flex; flex-direction: column; gap: 0; }
+
+.section {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(48,26,70,.07);
+}
+.section:last-child { border-bottom: none; }
+
+.h2 {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1.7rem;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+.h3 {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1.2rem;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+.lead {
+  font-size: .93rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+/* Steps */
+.steps { display: flex; flex-direction: column; gap: 0; }
+
+.step {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+}
+
+.stepLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.stepNum {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 0 4px;
+}
+
+.stepLine {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  border-radius: 99px;
+}
+
+.step:last-child .stepLine { display: none; }
+
+.stepCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border: 1.5px solid rgba(48,26,70,.06);
+  transition: var(--transition);
+}
+.stepCard:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+
+.stepIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepBody { flex: 1; }
+.stepTitle {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.stepText {
+  font-size: .88rem;
+  color: var(--text-muted);
+  line-height: 1.72;
+}
+
+/* Documents */
+.docsCard {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  border: 1.5px solid rgba(48,26,70,.08);
+}
+
+.docList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.docList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: 10px 14px;
+  background: var(--white);
+  border-radius: 10px;
+}
+
+/* Contact strip */
+.contactStrip {
+  background: var(--purple);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.contactActions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+/* btn-white-outline */
+:global(.btn-white-outline) {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.5);
+  color: #fff;
+  border-radius: 99px;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+}
+:global(.btn-white-outline):hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.8);
+}
+
+@media (max-width: 600px) {
+  .contactStrip { flex-direction: column; text-align: center; }
+  .contactActions { flex-direction: column; width: 100%; }
+  .step { grid-template-columns: 40px 1fr; gap: 12px; }
+  .stepCard { flex-direction: column; gap: 12px; }
+  .docsCard { padding: 20px; }
+}

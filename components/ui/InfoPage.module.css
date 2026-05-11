@@ -1,0 +1,230 @@
+/* Shared styles for content-heavy informational pages */
+
+.content { display: flex; flex-direction: column; gap: 0; }
+
+.section {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(48,26,70,.07);
+}
+.section:last-child { border-bottom: none; }
+
+/* Typography */
+.h2 {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1.7rem;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.h3 {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1.2rem;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+.h4 {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1rem;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+.lead {
+  font-size: .93rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.body {
+  font-size: .91rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* Highlight box */
+.highlight {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1.5px solid rgba(48,26,70,.08);
+}
+.highlightOrange {
+  background: var(--orange-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1.5px solid rgba(249,115,22,.2);
+}
+.highlightPurple {
+  background: var(--purple-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1.5px solid rgba(48,26,70,.15);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.table thead tr { background: var(--orange); }
+.table th {
+  padding: 14px 18px;
+  font-size: .84rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  letter-spacing: .03em;
+}
+.table td {
+  padding: 13px 18px;
+  font-size: .89rem;
+  color: var(--text);
+  border-bottom: 1px solid rgba(48,26,70,.06);
+}
+.table tr:nth-child(even) td { background: var(--cream); }
+.table tr:last-child td { border-bottom: none; }
+.table td strong { color: var(--purple); font-weight: 800; }
+
+/* Badge in table */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: .76rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Checklist */
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.checkList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.55;
+}
+.checkList li svg { flex-shrink: 0; margin-top: 2px; }
+
+/* Numbered list */
+.numberedList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.numberedList li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+}
+.numBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-fredoka), cursive;
+}
+.numText { font-size: .9rem; color: var(--text-muted); line-height: 1.65; padding-top: 7px; }
+.numText strong { color: var(--purple); display: block; margin-bottom: 2px; font-size: .92rem; }
+
+/* Card grid */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  border: 1.5px solid rgba(48,26,70,.06);
+}
+.cardTitle {
+  font-family: var(--font-fredoka), cursive;
+  font-size: 1rem;
+  color: var(--purple);
+  margin-bottom: 8px;
+}
+.cardBody { font-size: .87rem; color: var(--text-muted); line-height: 1.65; }
+
+/* Contact strip */
+.contactStrip {
+  background: #1c3a2a;
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.contactStrip h3 { font-family: var(--font-fredoka), cursive; font-size: 1.2rem; color: #fff; margin-bottom: 4px; }
+.contactStrip p { font-size: .87rem; color: rgba(255,255,255,.7); }
+.contactActions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+/* Ratio pill */
+.ratioPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  border-radius: 99px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: var(--font-fredoka), cursive;
+  color: #fff;
+}
+
+/* Timeline / terms */
+.termCard {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(48,26,70,.06);
+}
+.termCard:last-child { border-bottom: none; }
+.termNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-family: var(--font-fredoka), cursive;
+}
+.termTitle { font-size: .92rem; font-weight: 800; color: var(--purple); margin-bottom: 4px; }
+.termBody { font-size: .87rem; color: var(--text-muted); line-height: 1.65; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cardGrid { grid-template-columns: 1fr; }
+  .contactStrip { flex-direction: column; text-align: center; }
+  .contactActions { flex-direction: column; width: 100%; }
+}

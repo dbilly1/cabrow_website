@@ -1,0 +1,15 @@
+.nav { }
+
+.inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 12px 0;
+}
+
+.item { display: flex; align-items: center; gap: 2px; font-size: .82rem; font-weight: 600; }
+.item a { color: var(--text-muted); transition: var(--transition); }
+.item a:hover { color: var(--orange); }
+.sep { color: var(--text-muted); margin: 0 4px; }
+.current { color: var(--purple); font-weight: 800; }
