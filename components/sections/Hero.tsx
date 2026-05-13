@@ -14,17 +14,23 @@ export default function Hero() {
         {/* Left: text */}
         <div className={s.left}>
           <h1 className={s.title}>
-            Raising Children<br />
-            With <em>Care, Faith</em><br />
+            Raising Children
+            <br />
+            With <em>Care, Faith</em>
+            <br />
             &amp; Joy
           </h1>
           <p className={s.sub}>
-            Quality early childhood &amp; basic education rooted in values, creativity, and purpose —
-            at Choice Junction, Mallam-Kasoa Highway, Ghana.
+            Quality early childhood &amp; basic education rooted in values,
+            creativity, and purpose. Nurturing the child for a bright future.
           </p>
           <div className={s.ctas}>
-            <Link href="/#contact" className="btn btn-orange">Enroll Your Child →</Link>
-            <Link href="/#story" className="btn btn-outline">Learn About Us</Link>
+            <Link href="/#contact" className="btn btn-orange">
+              Enroll Your Child →
+            </Link>
+            <Link href="/#story" className="btn btn-outline">
+              Learn About Us
+            </Link>
           </div>
         </div>
 
@@ -35,14 +41,18 @@ export default function Hero() {
           <div className={`${s.deco} ${s.d3}`} />
 
           <div className={`${s.card} ${s.card1}`}>
-            <div className={s.cardInner}><Baby weight="fill" size={64} /></div>
+            <div className={s.cardInner}>
+              <Baby weight="fill" size={64} />
+            </div>
             <div className={s.cardLabel}>
               <strong>Early Years</strong>
               <span>Preschool · Age 2–5</span>
             </div>
           </div>
           <div className={`${s.card} ${s.card2}`}>
-            <div className={s.cardInner}><BookOpen weight="fill" size={56} /></div>
+            <div className={s.cardInner}>
+              <BookOpen weight="fill" size={56} />
+            </div>
             <div className={s.cardLabel}>
               <strong>Basic School</strong>
               <span>Primary · GES Curriculum</span>
@@ -53,8 +63,15 @@ export default function Hero() {
 
       {/* Wave bottom */}
       <div className="wave" style={{ marginTop: "0" }}>
-        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+        <svg
+          viewBox="0 0 1440 80"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"
+            fill="#ffffff"
+          />
         </svg>
       </div>
     </section>
