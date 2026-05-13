@@ -1,4 +1,7 @@
-.meals { background: var(--yellow-light); padding: 72px 0 0; }
+.meals {
+  background: var(--yellow-light);
+  padding: 72px 0 0;
+}
 
 .grid {
   display: grid;
@@ -16,41 +19,75 @@
   height: 340px;
 }
 .circle {
-  width: 280px; height: 280px;
-  background: rgba(234,179,8,.22);
+  width: 460px;
+  height: 460px;
+  background: rgba(234, 179, 8, 0.22);
   border-radius: 50%;
   position: absolute;
 }
 .dot {
-  width: 70px; height: 70px;
+  width: 70px;
+  height: 70px;
   background: var(--orange);
   border-radius: 50%;
   position: absolute;
-  top: 20px; right: 20px;
-  opacity: .45;
+  top: 20px;
+  right: 20px;
+  opacity: 0.45;
 }
-.icon { color: var(--purple-mid); opacity: .65; position: relative; z-index: 1; }
+.icon {
+  color: var(--purple-mid);
+  opacity: 0.65;
+  position: relative;
+  z-index: 1;
+}
+.image {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
 
 /* Pills */
-.pills { display:flex; flex-direction:column; gap:14px; margin-top:28px; }
+.pills {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
 .pill {
-  display: flex; align-items: center; gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   background: #fff;
   border-radius: 14px;
   padding: 16px 20px;
-  box-shadow: 0 2px 12px rgba(48,26,70,.06);
+  box-shadow: 0 2px 12px rgba(48, 26, 70, 0.06);
 }
 .pillIcon {
-  width: 42px; height: 42px;
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
   background: var(--yellow-light);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--orange);
   flex-shrink: 0;
 }
-.pill span { font-weight: 700; font-size: .92rem; color: var(--text); }
+.pill span {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+}
 
-@media (max-width:900px) {
-  .grid { grid-template-columns:1fr; }
-  .visual { height:240px; }
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .visual {
+    height: 240px;
+  }
 }

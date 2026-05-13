@@ -1,4 +1,7 @@
-.story { background: var(--cream); padding: 0; }
+.story {
+  background: var(--cream);
+  padding: 0;
+}
 
 .grid {
   display: grid;
@@ -9,27 +12,46 @@
 }
 
 .body {
-  font-size: .97rem;
+  font-size: 0.97rem;
   color: var(--text-muted);
   line-height: 1.8;
   margin-bottom: 18px;
 }
 
 /* Quotes */
-.quotes { display:flex; flex-direction:column; gap:16px; margin-top:28px; }
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
 .quote {
   padding: 18px 20px;
   border-radius: 14px;
   border-left: 4px solid transparent;
 }
 .quote strong {
-  display: flex; align-items: center; gap: 8px;
-  font-family: var(--font-fredoka),'Fredoka One',cursive;
-  font-size: 1rem; margin-bottom: 8px; color: var(--purple);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-fredoka), "Fredoka One", cursive;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--purple);
 }
-.quote p { font-size: .88rem; color: var(--text-muted); line-height: 1.7; }
-.mission { background: var(--orange-light); border-color: var(--orange); }
-.vision  { background: var(--purple-light); border-color: var(--purple); }
+.quote p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.mission {
+  background: var(--orange-light);
+  border-color: var(--orange);
+}
+.vision {
+  background: var(--purple-light);
+  border-color: var(--purple);
+}
 
 /* Collage */
 .collage {
@@ -39,30 +61,136 @@
 .colCard {
   position: absolute;
   border-radius: 24px;
-  display: flex; flex-direction:column; align-items:center; justify-content:flex-end;
-  padding-bottom: 16px; gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+  gap: 8px;
   box-shadow: var(--shadow);
   transition: var(--transition);
   overflow: hidden;
 }
-.colCard span { position:absolute; top:50%; left:50%; transform:translate(-50%,-70%); }
-.colCard:hover { transform:translateY(-4px) rotate(0deg); box-shadow:var(--shadow-hover); }
-
-.c1 { width:160px;height:190px; background:linear-gradient(145deg,#fde8d0,#fcc8a0); top:0;left:20px; transform:rotate(-3deg); }
-.c2 { width:180px;height:200px; background:linear-gradient(145deg,#f3eeff,#d8b4fe); top:0;right:10px; transform:rotate(2deg); }
-.c3 { width:160px;height:180px; background:linear-gradient(145deg,#fdf2f8,#fbcfe8); bottom:0;left:0; transform:rotate(2deg); }
-.c4 { width:170px;height:185px; background:linear-gradient(145deg,#f0fdf4,#a7f3c3); bottom:0;right:30px; transform:rotate(-2deg); }
-
-.colLabel {
-  font-size: .78rem; font-weight: 800;
-  color: var(--purple);
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(6px);
-  padding: 4px 12px; border-radius: 99px;
-  position: relative; z-index: 1;
+.colCard span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+.colCard:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: var(--shadow-hover);
 }
 
-@media (max-width:900px) {
-  .grid { grid-template-columns:1fr; }
-  .collage { height:320px; }
+.c1 {
+  width: 260px;
+  height: 190px;
+  top: 0;
+  left: 20px;
+  transform: rotate(-3deg);
+}
+.c2 {
+  width: 280px;
+  height: 200px;
+  top: 0;
+  right: 10px;
+  transform: rotate(2deg);
+}
+.c3 {
+  width: 260px;
+  height: 180px;
+  bottom: 0;
+  left: 0;
+  transform: rotate(2deg);
+}
+.c4 {
+  width: 270px;
+  height: 185px;
+  bottom: 0;
+  right: 30px;
+  transform: rotate(-2deg);
+}
+
+.colLabel {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--purple);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 4px 12px;
+  border-radius: 99px;
+  position: relative;
+  z-index: 1;
+}
+
+.colCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .collage {
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .collage {
+    height: 280px;
+  }
+  .c1 {
+    width: 180px;
+    height: 130px;
+    left: 10px;
+  }
+  .c2 {
+    width: 190px;
+    height: 140px;
+    right: 5px;
+  }
+  .c3 {
+    width: 170px;
+    height: 120px;
+    left: 0;
+  }
+  .c4 {
+    width: 180px;
+    height: 125px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collage {
+    height: 240px;
+  }
+  .c1 {
+    width: 180px;
+    height: 100px;
+    top: 0;
+    left: 5px;
+  }
+  .c2 {
+    width: 180px;
+    height: 110px;
+    top: 0;
+    right: 0;
+  }
+  .c3 {
+    width: 180px;
+    height: 95px;
+    bottom: 0;
+    left: 0;
+  }
+  .c4 {
+    width: 180px;
+    height: 100px;
+    bottom: 0;
+    right: 5px;
+  }
 }

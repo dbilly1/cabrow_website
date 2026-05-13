@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Baby, BookOpen } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 import s from "./Hero.module.css";
 
 export default function Hero() {
@@ -41,18 +41,24 @@ export default function Hero() {
           <div className={`${s.deco} ${s.d3}`} />
 
           <div className={`${s.card} ${s.card1}`}>
-            <div className={s.cardInner}>
-              <Baby weight="fill" size={64} />
-            </div>
+            <Image
+              src="/Images/1.jpg"
+              alt="Early Years - Preschool for Age 2-5"
+              fill
+              className={s.cardImage}
+            />
             <div className={s.cardLabel}>
               <strong>Early Years</strong>
               <span>Preschool · Age 2–5</span>
             </div>
           </div>
           <div className={`${s.card} ${s.card2}`}>
-            <div className={s.cardInner}>
-              <BookOpen weight="fill" size={56} />
-            </div>
+            <Image
+              src="/Images/2.jpg"
+              alt="Basic School - Primary GES Curriculum"
+              fill
+              className={s.cardImage}
+            />
             <div className={s.cardLabel}>
               <strong>Basic School</strong>
               <span>Primary · GES Curriculum</span>
